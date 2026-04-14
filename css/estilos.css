@@ -79,7 +79,12 @@ header{
     margin-top: 250px;         
 }
 
-.frase_header {
+.texto_header h1 {
+    font-family: 'Permanent Marker', cursive;
+}
+
+.texto_header p {
+    
     max-width: 800px;          
     margin: 20px 0;           
     font-size: 1.2em;         
@@ -99,17 +104,11 @@ header{
     margin: 20px auto 0 auto;  
 }
 
-/* --- SECCIÓN DE ZAPATILLAS DESTACADAS --- */
+
 .seccion_destacados {
-    background-color: #f0f0f0; /* El color de fondo gris clarito */
-    
-    /* Recortamos la parte de arriba con la misma inclinación que el header (150px) */
+    background-color: #f0f0f0; 
     clip-path: polygon(0 0, 50% 150px, 100% 0, 100% 100%, 0 100%);
-    
-    /* Subimos la caja. Si pusiéramos -150px se pegarían. Al poner -130px, dejamos 20px de línea blanca */
     margin-top: -130px; 
-    
-    /* Damos espacio por arriba para que el texto no se lo coma el pico */
     padding-top: 200px; 
     padding-bottom: 80px;
     text-align: center;
@@ -133,7 +132,7 @@ header{
     width: 40%;
 }
 
-/* --- EL EFECTO FLOTANTE PARA LOS PNG --- */
+
 .zapa_flotante {
     width: 100%;
     
@@ -150,4 +149,5 @@ header{
     50% { transform: translateY(-20px); } /* Sube 20px en la mitad de la animación */
     100% { transform: translateY(0px); }
 }
+
 

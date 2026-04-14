@@ -15,8 +15,15 @@ nav a {
     margin: 0 auto; 
 }
 
-.logo{
-    text-align: left;
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    text-decoration: none;
 }
 
 header{
@@ -30,6 +37,8 @@ header{
         url("../img/tiendazapatillas.jpg"); 
     background-size: cover;
     background-position: center;
+    clip-path: polygon(100% 0, 100% 85%, 50% 100%, 0 85%, 0 0);
+
 }
 
 .menu_header{
@@ -68,10 +77,77 @@ header{
     align-items: center;      
     text-align: center;       
     margin-top: 250px;         
-
+}
 
 .frase_header {
     max-width: 800px;          
     margin: 20px 0;           
     font-size: 1.2em;         
 }
+
+.boton_sabermas {
+    background-color: #0000ff;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;   
+    align-items: center;      
+    width: 140px;              
+    height: 45px;              
+    margin: 20px auto 0 auto;  
+}
+
+/* --- SECCIÓN DE ZAPATILLAS DESTACADAS --- */
+.seccion_destacados {
+    background-color: #f0f0f0; /* El color de fondo gris clarito */
+    
+    /* Recortamos la parte de arriba con la misma inclinación que el header (150px) */
+    clip-path: polygon(0 0, 50% 150px, 100% 0, 100% 100%, 0 100%);
+    
+    /* Subimos la caja. Si pusiéramos -150px se pegarían. Al poner -130px, dejamos 20px de línea blanca */
+    margin-top: -130px; 
+    
+    /* Damos espacio por arriba para que el texto no se lo coma el pico */
+    padding-top: 200px; 
+    padding-bottom: 80px;
+    text-align: center;
+}
+
+.titulo_destacados {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #333; /* Un gris oscuro para que destaque sobre el fondo clarito */
+}
+
+.contenedor_zapatillas {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.caja_zapatilla {
+    width: 40%;
+}
+
+/* --- EL EFECTO FLOTANTE PARA LOS PNG --- */
+.zapa_flotante {
+    width: 100%;
+    
+    /* IMPORTANTE: Para los PNG usamos drop-shadow, no box-shadow */
+    filter: drop-shadow(0px 20px 15px rgba(0, 0, 0, 0.4));
+    
+    /* Añadimos una animación para que la zapatilla suba y baje lentamente */
+    animation: flotar 4s ease-in-out infinite; 
+}
+
+/* Instrucciones de la animación */
+@keyframes flotar {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); } /* Sube 20px en la mitad de la animación */
+    100% { transform: translateY(0px); }
+}
+

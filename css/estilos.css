@@ -1,21 +1,17 @@
-:root {
-    --padding-container: 50px 0;
-}
-
 * {
     margin: 0;
-    padding: 0;
+    padding: 0;                 /*reseteo de valores de la pagina y border-box para las cajas*/
     box-sizing: border-box;
 }
 
-nav a {
-    text-decoration: none; 
+nav a {                     /*poner color blanco y quitar el subrayado de los enlaces*/
+    text-decoration: none;  
     color: white;       
     padding: 0;
     margin: 0 auto; 
 }
 
-.logo {
+.logo {                     /*fondo blanco para el logo y centrarlo*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,7 +22,7 @@ nav a {
     text-decoration: none;
 }
 
-header{
+header{                     /*Poner un efecto que oscurece la foto de fondo y dar el efecto triangular al final de la foto*/
     height: 1000px;
     background-image: 
         linear-gradient(
@@ -41,7 +37,7 @@ header{
 
 }
 
-.menu_header{
+.menu_header{                           /*distribucion de los botones y objetos de la pagina*/
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -50,27 +46,28 @@ header{
     margin: 0 auto;
 }
 
-.botones_header {
+.botones_header {                  /*Pone una pequeña separacion entre los botones de la cabecera*/
     display: flex;
     gap: 40px; 
 }
 
-.redes_sociales {
+.redes_sociales {                   /*Espacio entre los logos (botones) de las redes sociales*/
     display: flex;
     gap: 15px;
 }
 
-.redes_sociales a {
+.redes_sociales a {                  /*fondo blanco para los logos*/         
     display: flex;             
     justify-content: center;  
     align-items: center; 
     background-color: white;   
     border-radius: 50%;        
     width: 50px;             
-    height: 50px;           
+    height: 50px;  
+    gap: 15px;         
 }
 
-.texto_header {
+.texto_header {                     /*Color y posicion del texto*/
     color: white;
     display: flex;
     flex-direction: column;   
@@ -79,18 +76,17 @@ header{
     margin-top: 250px;         
 }
 
-.texto_header h1 {
+.texto_header h1 {                  /* Letra del font*/
     font-family: 'Permanent Marker', cursive;
 }
 
-.texto_header p {
-    
+.texto_header p {                 /*Tamaño de letra y espaciado*/
     max-width: 800px;          
     margin: 20px 0;           
     font-size: 1.2em;         
 }
 
-.boton_sabermas {
+.boton_sabermas {                  /*Dar forma y color al enlace*/
     background-color: darkred;
     color: white;
     text-decoration: none;
@@ -105,7 +101,7 @@ header{
 }
 
 
-.seccion_destacados {
+.seccion_destacados {           /*Color de fondo y forma en pico*/
     background-color: #f0f0f0; 
     clip-path: polygon(0 0, 50% 150px, 100% 0, 100% 100%, 0 100%);
     margin-top: -130px; 
@@ -114,13 +110,13 @@ header{
     text-align: center;
 }
 
-.titulo_destacados {
+.titulo_destacados {            /*tamaño y color de la letra*/
     font-size: 2.5rem;
     margin-bottom: 50px;
     color: #333; 
 }
 
-.contenedor_zapatillas {
+.contenedor_zapatillas {            /*Posicion de las fotos, tamaño y separación entre ellas*/
     display: flex;
     justify-content: center;
     gap: 80px;
@@ -129,12 +125,12 @@ header{
     align-items: center;      
 }
 
-.caja_zapatilla {
+.caja_zapatilla {    /*ancho con respecto al tamaño de la pagina del contenedor de las zapatillas*/
     width: 40%;
 }
 
 
-.zapa_flotante {
+.zapa_flotante {        /*animacion de levitacion en la zapatilla*/
     width: 100%;
     
     filter: drop-shadow(0px 20px 15px rgba(0, 0, 0, 0.4));
@@ -142,29 +138,27 @@ header{
     animation: levitacion 4s ease-in-out infinite; 
 }
 
-/* Instrucciones de la animación */
-@keyframes levitacion {
+
+@keyframes levitacion {         /* definicion de la animacion de levitar*/
     0% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); } /* Sube 20px en la mitad de la animación */
+    50% { transform: translateY(-20px); }
     100% { transform: translateY(0px); }
 }
 
-/* 1. EL CONTENEDOR PRINCIPAL */
+
 .contenedor_zapatillas {
     display: flex;
-    justify-content: center; /* Centra todo en la pantalla */
-    align-items: center;     /* Alinea las zapatillas y los textos a la misma altura vertical */
-    gap: 40px;               /* Esta es la separación entre zapatilla - texto - zapatilla */
-    margin-top: 50px;
+    justify-content: center; /*Centra las zapatillas y el texto, los pone a la misma altura y deja espacio con el titulo*/
+    align-items: center;     
+    gap: 40px;
 }
 
-/* 2. EL TAMAÑO DE LAS ZAPATILLAS */
-/* Como tu HTML tiene un div .caja_zapatilla, le decimos que las imágenes de dentro midan siempre lo mismo */
+
 .caja_zapatilla img {
     width: 320px;
     height: 220px;
     object-fit: contain; /* Evita que se deformen */
-    /* Aquí puedes dejar la animación y la sombra que ya tenías */
+    
 }
 
 /* 3. LOS TEXTOS DE LA DERECHA */
@@ -238,4 +232,29 @@ header{
     color: #e63946; /* El mismo rojo de tu botón de "Saber más" */
 }
 
+/* --- BANNER PROMOCIONAL --- */
+.banner-promo {
+    background-color: #8b0000; /* Pon aquí el código de color exacto que usaste en tu botón */
+    color: #ffffff;
+    text-align: center;
+    padding: 25px 20px;
+    margin-top: 60px; /* Para que no se pegue a las zapatillas de arriba */
+    font-family: 'Montserrat', sans-serif;
+}
 
+.banner-promo p {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.banner-promo span {
+    background-color: #ffffff; /* Fondo blanco para el código */
+    color: #8b0000;            /* Letras del color de tu botón */
+    padding: 2px 10px;
+    border-radius: 5px;
+    margin-left: 10px;
+    font-family: 'Courier New', Courier, monospace; /* Fuente tipo 'ticket' para el código */
+}

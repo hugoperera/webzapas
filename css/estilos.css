@@ -91,7 +91,7 @@ header{
 }
 
 .boton_sabermas {
-    background-color: #0000ff;
+    background-color: darkred;
     color: white;
     text-decoration: none;
     border-radius: 30px;
@@ -117,7 +117,7 @@ header{
 .titulo_destacados {
     font-size: 2.5rem;
     margin-bottom: 50px;
-    color: #333; /* Un gris oscuro para que destaque sobre el fondo clarito */
+    color: #333; 
 }
 
 .contenedor_zapatillas {
@@ -126,6 +126,7 @@ header{
     gap: 80px;
     max-width: 1000px;
     margin: 0 auto;
+    align-items: center;      
 }
 
 .caja_zapatilla {
@@ -136,18 +137,105 @@ header{
 .zapa_flotante {
     width: 100%;
     
-    /* IMPORTANTE: Para los PNG usamos drop-shadow, no box-shadow */
     filter: drop-shadow(0px 20px 15px rgba(0, 0, 0, 0.4));
     
-    /* Añadimos una animación para que la zapatilla suba y baje lentamente */
-    animation: flotar 4s ease-in-out infinite; 
+    animation: levitacion 4s ease-in-out infinite; 
 }
 
 /* Instrucciones de la animación */
-@keyframes flotar {
+@keyframes levitacion {
     0% { transform: translateY(0px); }
     50% { transform: translateY(-20px); } /* Sube 20px en la mitad de la animación */
     100% { transform: translateY(0px); }
+}
+
+/* 1. EL CONTENEDOR PRINCIPAL */
+.contenedor_zapatillas {
+    display: flex;
+    justify-content: center; /* Centra todo en la pantalla */
+    align-items: center;     /* Alinea las zapatillas y los textos a la misma altura vertical */
+    gap: 40px;               /* Esta es la separación entre zapatilla - texto - zapatilla */
+    margin-top: 50px;
+}
+
+/* 2. EL TAMAÑO DE LAS ZAPATILLAS */
+/* Como tu HTML tiene un div .caja_zapatilla, le decimos que las imágenes de dentro midan siempre lo mismo */
+.caja_zapatilla img {
+    width: 320px;
+    height: 220px;
+    object-fit: contain; /* Evita que se deformen */
+    /* Aquí puedes dejar la animación y la sombra que ya tenías */
+}
+
+/* 3. LOS TEXTOS DE LA DERECHA */
+.info_producto {
+    text-align: center; /* Centra el texto sobre sí mismo, como en tu imagen */
+    font-family: 'Montserrat', sans-serif; /* Si prefieres la letra clásica, borra esta línea */
+}
+
+.info_producto .marca {
+    color: #888888;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.info_producto h3 {
+    font-size: 1.4rem;
+    color: #111111;
+    margin: 5px 0;
+}
+
+.info_producto .precio {
+    color: #e63946; /* El color rojo exacto de tu captura */
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* --- ESTILOS DEL FOOTER --- */
+
+.pie-pagina {
+    background-color: #111111; /* Un negro casi puro para dar contraste */
+    color: #ffffff;
+    padding: 40px 20px;
+    margin-top: 80px; /* Le da espacio para respirar respecto a las zapatillas */
+    font-family: 'Montserrat', sans-serif;
+}
+
+.footer-contenido {
+    display: flex;
+    justify-content: space-between; /* Manda el copyright a la izq y las redes a la der */
+    align-items: center;
+    max-width: 1200px; /* Evita que en pantallas gigantes se separen demasiado */
+    margin: 0 auto; /* Centra el bloque en la pantalla */
+    flex-wrap: wrap; /* Si alguien lo ve en móvil, se pondrá uno debajo del otro */
+}
+
+.copyright p {
+    color: #888888; /* Un gris elegante para que no quite protagonismo */
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.redes-sociales {
+    display: flex;
+    gap: 25px; /* Espacio entre las distintas redes */
+}
+
+.social-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Hace que el cambio de color sea suave */
+}
+
+/* El efecto al pasar el ratón por encima de la red social */
+.social-link:hover {
+    color: #e63946; /* El mismo rojo de tu botón de "Saber más" */
 }
 
 

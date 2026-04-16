@@ -11,24 +11,66 @@
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav class="menu_header">
-            <div>
-                <a href="index.html" class="logo">
-                    <img src="img/logo.svg" width="40px"  alt="Logo de UrbanKicks">
-                </a>
-            </div>
-            <div>
-                <nav class="botones_header">
-                    <a href="catalogo.html">Catalogo</a>
-                    <a href="#">Sobre nosotros</a>
-                    <a href="#">Contacto</a>
-                </nav>
-            </div>
-            <div class="redes_sociales">
-                <a href="#"><img src="img/instagram.svg" width="40px" alt="instagram"></a>
-                <a href="#"><img src="img/whatsapp.svg" width="40px" alt="whatsapp"></a>
-            </div>
+<header class="header_general"> 
+    
+    <div class="menu_header">
+        
+        <div>
+            <a href="index.html" class="logo">
+                <img src="img/logo.svg" width="40px" alt="Logo de UrbanKicks">
+            </a>
+        </div>
+
+        <nav class="botones_header">
+            <a href="catalogo.html">Catalogo</a>
+            <a href="#">Sobre nosotros</a>
+            <a href="#">Contacto</a>
         </nav>
-    </header>
-</body>
+
+        <div class="redes_sociales">
+            <a href="#"><img src="img/instagram.svg" width="40px" alt="instagram"></a>
+            <a href="#"><img src="img/whatsapp.svg" width="40px" alt="whatsapp"></a>
+        </div>
+        
+    </div>
+</header>
+
+<main class="contenedor-catalogo">
+
+    <aside class="filtros-lateral">
+        <h3>Filtrar por</h3>
+        
+        <div class="grupo-filtro">
+            <label for="marca">Marca:</label>
+            <select id="marca">
+                <option value="todas">Todas las marcas</option>
+                <option value="nike">Nike</option>
+                <option value="adidas">Adidas</option>
+                <option value="nb">New Balance</option>
+            </select>
+        </div>
+
+        <div class="grupo-filtro">
+            <label for="sexo">Sexo:</label>
+            <select id="sexo">
+                <option value="todos">Todos</option>
+                <option value="hombre">Hombre</option>
+                <option value="mujer">Mujer</option>
+            </select>
+        </div>
+    </aside>
+
+    <section class="cuadricula-zapatillas">
+        
+        <article class="tarjeta-producto">
+            <img src="img/zapa-ejemplo.jpg" alt="Nike Air Max"> 
+            
+            <div class="info_producto">
+                <p class="marca">NIKE</p>
+                <h3>Air Max 97 Silver</h3>
+                <p class="precio">180€</p>
+            </div>
+        </article>
+        
+        </section>
+</main>

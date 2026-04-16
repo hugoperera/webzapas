@@ -1,3 +1,16 @@
+:root {
+    /*colores principales*/
+    --color-rojo-oscuro: #8b0000; /* banner y el botón saber más*/
+    --color-rojo-acento: #e63946; /* hover de redes sociales y en el precio */
+    --color-fondo-oscuro: #111111; /*footer y títulos*/
+    --color-gris-texto: #888888; /*copyright y marcas de zapas */
+    --color-blanco: #ffffff;
+    
+    /*tipografías*/
+    --fuente-textos: 'Montserrat', sans-serif;
+    --fuente-titulos: 'Permanent Marker', cursive;
+}
+
 * {
     margin: 0;
     padding: 0;                 /*reseteo de valores de la pagina y border-box para las cajas*/
@@ -22,7 +35,7 @@ nav a {                     /*poner color blanco y quitar el subrayado de los en
     text-decoration: none;
 }
 
-header{                     /*Poner un efecto que oscurece la foto de fondo y dar el efecto triangular al final de la foto*/
+.header_inicio{                     /*Poner un efecto que oscurece la foto de fondo y dar el efecto triangular al final de la foto*/
     height: 1000px;
     background-image: 
         linear-gradient(
@@ -87,8 +100,8 @@ header{                     /*Poner un efecto que oscurece la foto de fondo y da
 }
 
 .boton_sabermas {                  /*Dar forma y color al enlace*/
-    background-color: darkred;
-    color: white;
+    background-color: var(--color-rojo-oscuro);
+    color: var(--color-blanco);
     text-decoration: none;
     border-radius: 30px;
     font-weight: bold;
@@ -161,10 +174,10 @@ header{                     /*Poner un efecto que oscurece la foto de fondo y da
     
 }
 
-/* 3. LOS TEXTOS DE LA DERECHA */
-.info_producto {
-    text-align: center; /* Centra el texto sobre sí mismo, como en tu imagen */
-    font-family: 'Montserrat', sans-serif; /* Si prefieres la letra clásica, borra esta línea */
+
+.info_producto {            /*Hace que el texto este uno encima de otro y cambia la tipografia*/
+    text-align: center;
+    font-family: 'Montserrat', sans-serif; 
 }
 
 .info_producto .marca {
@@ -174,20 +187,19 @@ header{                     /*Poner un efecto que oscurece la foto de fondo y da
     margin-bottom: 5px;
 }
 
-.info_producto h3 {
+.info_producto h3 {                     /*tamaño y color de letre*/
     font-size: 1.4rem;
     color: #111111;
     margin: 5px 0;
 }
 
-.info_producto .precio {
-    color: #e63946; /* El color rojo exacto de tu captura */
+.info_producto .precio {            /*color, tamoño de letra y dar fuerza a el precio*/
+    color: var(--color-rojo-acento);
     font-size: 1.2rem;
     font-weight: bold;
     margin-top: 10px;
 }
 
-/* --- ESTILOS DEL FOOTER --- */
 
 .pie-pagina {
     background-color: #111111; /* Un negro casi puro para dar contraste */
@@ -227,13 +239,12 @@ header{                     /*Poner un efecto que oscurece la foto de fondo y da
     transition: color 0.3s ease; /* Hace que el cambio de color sea suave */
 }
 
-/* El efecto al pasar el ratón por encima de la red social */
-.social-link:hover {
-    color: #e63946; /* El mismo rojo de tu botón de "Saber más" */
+
+.social-link:hover {    /* efecto al pasar el ratón por encima de la red social */
+    color: var(--color-rojo-acento);
 }
 
-/* --- BANNER PROMOCIONAL --- */
-.banner-promo {
+.promo {
     background-color: #8b0000; /* Pon aquí el código de color exacto que usaste en tu botón */
     color: #ffffff;
     text-align: center;
@@ -242,7 +253,7 @@ header{                     /*Poner un efecto que oscurece la foto de fondo y da
     font-family: 'Montserrat', sans-serif;
 }
 
-.banner-promo p {
+.promo p {
     margin: 0;
     font-size: 1.2rem;
     font-weight: bold;
@@ -250,11 +261,34 @@ header{                     /*Poner un efecto que oscurece la foto de fondo y da
     text-transform: uppercase;
 }
 
-.banner-promo span {
+.promo span {
     background-color: #ffffff; /* Fondo blanco para el código */
     color: #8b0000;            /* Letras del color de tu botón */
     padding: 2px 10px;
     border-radius: 5px;
     margin-left: 10px;
     font-family: 'Courier New', Courier, monospace; /* Fuente tipo 'ticket' para el código */
+}
+
+
+
+
+
+/*------------------Header para el resto de paginas-----------------*/
+
+
+.header_general a {                     /*poner color blanco y quitar el subrayado de los enlaces*/
+    text-decoration: none;  
+    color: white;       
+    padding: 0;
+    margin: 0 auto; 
+}
+
+.header_general{                           /*distribucion de los botones y objetos de la pagina*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em;
+    max-width: 1200px;
+    margin: 0 auto;
 }

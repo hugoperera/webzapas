@@ -34,13 +34,44 @@
         
     </div>
 </header>
-<main>
+<main class="productos">
+    
+    <div class="foto_zapatilla">
+        <img id="foto-grande" src="../img/zapas/nikep6000blancas.png" alt="Zapatillas Nike P-6000 Blancas">
+    </div>
 
+    <div class="info_compra">
+        <div class="especifiaciones_zapatilla">
+            <p class="marca_detalle">NIKE</p>
+            <h1 class="modelo_detalle">P-6000</h1>
+            <p class="precio_detalle">120€</p>
+        </div>
+        <div class="bloque_colores">
+            <h3>Elige tu color:</h3>
+            <div class="boton_colores">
+                <button onclick="document.getElementById('foto-grande').src='../img/zapas/nikep6000blancas.png'">
+                    Blanco
+                </button>
+                <button onclick="document.getElementById('foto-grande').src='../img/zapas/nikep6000negras.png'">
+                    Negro
+                </button>
+            </div>
+        </div>
 
+        <div class="bloque_tallas">
+            <label for="talla_zapa">Talla:</label>
+            <select id="talla_zapa" name="talla-zapa">
+                <option value="38">38</option>
+                <option value="39">39</option>
+                <option value="40">40</option>
+                <option value="41">41</option>
+                <option value="42">42</option>
+            </select>
+        </div>
+
+        <button class="btn_añadir">Añadir al carrito</button>
+
+    </div>
 
 </main>
-
-
-
-    
 </body>

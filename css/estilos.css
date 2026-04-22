@@ -523,3 +523,7 @@
     margin-top: 10px;
     margin-left: 20px; /* Sangría para los puntos de la lista */
 }
+
+#btn_azul_oscuro{
+    background-color: #1a3a54;
+}

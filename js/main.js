@@ -3,7 +3,7 @@ let fotoZapatilla = document.getElementById("foto_zapa");
 
 // Cogemos los dos botones
 let botonBlanco = document.getElementById("btn_blanco");
-let botonNegro = document.getElementById("btn_negro");
+let botonNegro = document.getElementById("btn_azul_oscuro");
 
 // Le decimos qué hacer al botón blanco
 botonBlanco.addEventListener("click", function() {

@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <script src="../js/main.js"></script>
 </head>
 <body>
 <header class="header_general"> 
@@ -37,11 +38,11 @@
 <main class="productos">
     
     <div class="foto_zapatilla">
-        <img id="foto-grande" src="../img/zapas/nikep6000blancas.png" alt="Zapatillas Nike P-6000 Blancas">
+        <img id="foto_zapa" src="../img/zapas/nikep6000blancas.png" alt="Zapatillas Nike P-6000 Blancas">
     </div>
 
     <div class="info_compra">
-        <div class="especifiaciones_zapatilla">
+        <div class="especificaciones_zapatilla">
             <p class="marca_detalle">NIKE</p>
             <h1 class="modelo_detalle">P-6000</h1>
             <p class="precio_detalle">120€</p>
@@ -49,12 +50,8 @@
         <div class="bloque_colores">
             <h3>Elige tu color:</h3>
             <div class="boton_colores">
-                <button onclick="document.getElementById('foto-grande').src='../img/zapas/nikep6000blancas.png'">
-                    Blanco
-                </button>
-                <button onclick="document.getElementById('foto-grande').src='../img/zapas/nikep6000negras.png'">
-                    Negro
-                </button>
+                <button id="btn_blanco" class="btn_color color_blanco"></button>
+                <button id="btn_negro" class="btn_color color_negro"></button>
             </div>
         </div>
 
@@ -72,6 +69,31 @@
         <button class="btn_añadir">Añadir al carrito</button>
 
     </div>
+    <div class="descripcion_zapatilla">
+            <p>Las Nike P-6000 combinan el estilo de las zapatillas de running de principios de los 2000 con una comodidad moderna. Su diseño transpirable y su amortiguación ligera te harán pisar fuerte en cualquier situación.</p>
+            <ul>
+                <li>Malla transpirable y revestimientos de piel.</li>
+                <li>Amortiguación de espuma para pisadas suaves.</li>
+                <li>Suela de goma para una tracción duradera.</li>
+            </ul>
+    </div>
 
 </main>
+<section class="promo">
+    <p>🔥 10% DE DESCUENTO ADICIONAL CON EL CÓDIGO <span>URBAN</span> 🔥</p>
+</section>
+<footer class="pie-pagina">
+    <div class="footer-contenido">
+        
+        <div class="copyright">
+            <p>&copy; 2026 UrbanKicks - Desarrollado por Hugo Perera Serrano. Todos los derechos reservados.</p>
+        </div>
+
+        <div class="redes_sociales_foter">
+            <a href="#" class="link_redes">Instagram</a>
+            <a href="#" class="link_redes">TikTok</a>
+            <a href="#" class="link_redes">Twitter X</a>
+        </div>
+    </div>
+</footer>
 </body>

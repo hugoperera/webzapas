@@ -472,7 +472,6 @@
     margin-right: 10px;
     margin-top: 10px;
     border: 2px solid var(--color-gris-texto);
-    background-color: var(--color-blanco);
     font-family: var(--fuente-textos);
     font-weight: bold;
     cursor: pointer;
@@ -524,6 +523,26 @@
     margin-left: 20px; /* Sangría para los puntos de la lista */
 }
 
-#btn_azul_oscuro{
+#btn_azul_oscuro_p6000{
     background-color: #1a3a54;
+}
+
+#btn_negro_samba{
+    background-color: black;
+}
+
+#btn_marron_samba{
+    background-color: brown;
+}
+
+#btn_negro_asics{
+    background-color: black;
+}
+
+#btn_azul_asics{
+    background-color: #7bc1f0;
+}
+
+#btn_negro_newbalance{
+    background-color: black;
 }

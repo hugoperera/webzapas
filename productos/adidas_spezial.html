@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UrbanKicks</title>
+    <link rel="icon" type="image/svg+xml" href="../img/logo.svg">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="header_general"> 
+    
+    <div class="menu_header">
+        
+        <div>
+            <a href="../index.html" class="logo">
+                <img src="../img/logo.svg" width="40px" alt="Logo de UrbanKicks">
+            </a>
+        </div>
+
+        <nav class="botones_header">
+            <a href="../catalogo.html">Catalogo</a>
+            <a href="#">Sobre nosotros</a>
+            <a href="#">Contacto</a>
+        </nav>
+
+        <div class="redes_sociales">
+            <a href="#"><img src="../img/instagram.svg" width="40px" alt="instagram"></a>
+            <a href="#"><img src="../img/whatsapp.svg" width="40px" alt="whatsapp"></a>
+        </div>
+        
+    </div>
+</header>
+<main class="productos">
+    
+    <div class="foto_zapatilla">
+        <img id="foto_zapa" src="../img/zapas/adidasspezialrojas.png" alt="Zapatillas Adidas Spezial">
+    </div>
+
+    <div class="info_compra">
+        <div class="especificaciones_zapatilla">
+            <p class="marca_detalle">ADIDAS</p>
+            <h1 class="modelo_detalle">SPEZIAL</h1>
+            <p class="precio_detalle">110€</p>
+        </div>
+        <div class="bloque_colores">
+            <h3>Elige tu color:</h3>
+            <div class="boton_colores">
+                <button id="btn_rojo_spezial"></button>
+                <button id="btn_blanco_spezial"></button>
+                <button id="btn_marron_spezial"></button>
+            </div>
+        </div>
+
+        <div class="bloque_tallas">
+            <label for="talla_zapa">Talla:</label>
+            <select id="talla_zapa" name="talla-zapa">
+                <option value="38">38</option>
+                <option value="39">39</option>
+                <option value="40">40</option>
+                <option value="41">41</option>
+                <option value="42">42</option>
+            </select>
+        </div>
+
+        <button class="btn_añadir">Añadir al carrito</button>
+
+    </div>
+    <div class="descripcion_zapatilla">
+            <p>Las Nike P-6000 combinan el estilo de las zapatillas de running de principios de los 2000 con una comodidad moderna. Su diseño transpirable y su amortiguación ligera te harán pisar fuerte en cualquier situación.</p>
+            <ul>
+                <li>Malla transpirable y revestimientos de piel.</li>
+                <li>Amortiguación de espuma para pisadas suaves.</li>
+                <li>Suela de goma para una tracción duradera.</li>
+            </ul>
+    </div>
+
+</main>
+<section class="promo">
+    <p>🔥 10% DE DESCUENTO ADICIONAL CON EL CÓDIGO <span>URBAN</span> 🔥</p>
+</section>
+<footer class="pie-pagina">
+    <div class="footer-contenido">
+        
+        <div class="copyright">
+            <p>&copy; 2026 UrbanKicks - Desarrollado por Hugo Perera Serrano. Todos los derechos reservados.</p>
+        </div>
+
+        <div class="redes_sociales_foter">
+            <a href="#" class="link_redes">Instagram</a>
+            <a href="#" class="link_redes">TikTok</a>
+            <a href="#" class="link_redes">Twitter X</a>
+        </div>
+    </div>
+</footer>
+</body>
+<script src="../js/main.js"></script>
+</html>

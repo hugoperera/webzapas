@@ -546,3 +546,19 @@
 #btn_negro_newbalance{
     background-color: black;
 }
+
+#btn_rojo_spezial{
+    background-color: rgb(116, 2, 2);
+}
+
+#btn_marron_spezial{
+    background-color: rgba(114, 51, 51, 0.767);
+}
+
+#btn_beige_airmax{
+    background-color: beige;
+}
+
+#btn_gris_airmax{
+    background-color: rgb(176, 176, 176);
+}

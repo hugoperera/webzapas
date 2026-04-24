@@ -28,7 +28,7 @@ if (document.getElementById("btn_blanco_samba")) {
     });
 }
 
-// ASICS
+// ASICS GEL NYC
 if (document.getElementById("btn_blanco_asics")) {
     let foto = document.getElementById("foto_zapa");
     
@@ -45,7 +45,7 @@ if (document.getElementById("btn_blanco_asics")) {
     });
 }
 
-// NNEW BALANCE U2002DX
+// NEW BALANCE U2002DX
 if (document.getElementById("btn_blanco_newbalance")) {
     let foto = document.getElementById("foto_zapa");
     
@@ -57,4 +57,39 @@ if (document.getElementById("btn_blanco_newbalance")) {
         foto.src = "../img/zapas/newbalance2002negras.png";
     });
 }
+
+// ADIDAS SPEZIAL
+if (document.getElementById("btn_rojo_spezial")) {
+    let foto = document.getElementById("foto_zapa");
+    
+    document.getElementById("btn_rojo_spezial").addEventListener("click", function() {
+        foto.src = "../img/zapas/adidasspezialrojas.png";
+    });
+
+    document.getElementById("btn_blanco_spezial").addEventListener("click", function() {
+        foto.src = "../img/zapas/adidasspezialblancas.png";
+    });
+
+    document.getElementById("btn_marron_spezial").addEventListener("click", function() {
+        foto.src = "../img/zapas/adidasspezialmarrones.png";
+    });
+}
+
+// NIKE AIRMAX
+if (document.getElementById("btn_blanco_airmax")) {
+    let foto = document.getElementById("foto_zapa");
+    
+    document.getElementById("btn_blanco_airmax").addEventListener("click", function() {
+        foto.src = "../img/zapas/nikeairmaxmoto2kblancas.png";
+    });
+
+    document.getElementById("btn_beige_airmax").addEventListener("click", function() {
+        foto.src = "../img/zapas/nikeairmaxmoto2kbeige.png";
+    });
+
+    document.getElementById("btn_gris_airmax").addEventListener("click", function() {
+        foto.src = "../img/zapas/nikeairmaxmoto2kgrises.png";
+    });
+}
+
 

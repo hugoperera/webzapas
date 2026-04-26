@@ -562,3 +562,19 @@
 #btn_gris_airmax{
     background-color: rgb(176, 176, 176);
 }
+
+
+.foto_inicio_nosotros{                     /*Poner un efecto que oscurece la foto de fondo y dar el efecto triangular al final de la foto*/
+    height: 1000px;
+    width: 100%;
+    background-image: 
+        linear-gradient(
+            180deg,
+            rgba(0,0,0,0.10) 0%,   
+            rgba(0,0,0,0.5) 100%   
+        ),
+        url("../img/foto_horizontal\ _tenda.jpg"); 
+    background-size: cover;
+    background-position: center;
+
+}

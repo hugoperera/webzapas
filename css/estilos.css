@@ -563,6 +563,7 @@
     background-color: rgb(176, 176, 176);
 }
 
+/*-----------Sobre nosotros-------------*/
 
 .foto_inicio_nosotros{                     /*Poner un efecto que oscurece la foto de fondo y dar el efecto triangular al final de la foto*/
     height: 1000px;
@@ -578,3 +579,88 @@
     background-position: center;
 
 }
+
+/* --- ESTILOS PÁGINA SOBRE NOSOTROS --- */
+
+.contenedor_nosotros {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+/* Historia con Flexbox */
+.seccion_historia {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 80px;
+}
+
+.texto_historia {
+    flex: 1;
+}
+
+.texto_historia h2 {
+    font-family: var(--fuente-titulos);
+    font-size: 2.5rem;
+    color: var(--color-fondo-oscuro);
+    margin-bottom: 20px;
+}
+
+.texto_historia p {
+    font-family: var(--fuente-textos);
+    color: var(--color-gris-texto);
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.imagen_historia {
+    flex: 1;
+}
+
+.imagen_historia img {
+    width: 100%;
+    border-radius: 15px;
+    /* Un pequeño detalle de diseño: una sombra roja como tu marca */
+    box-shadow: 15px 15px 0px var(--color-rojo-oscuro); 
+}
+
+/* Valores con Grid */
+.seccion_valores {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+    gap: 30px;
+    text-align: center;
+    background-color: #f9f9f9; /* Un fondo gris muy suave para resaltar */
+    padding: 50px 30px;
+    border-radius: 20px;
+}
+
+.valor_caja h3 {
+    font-family: var(--fuente-titulos);
+    color: var(--color-rojo-oscuro);
+    margin-bottom: 10px;
+}
+
+.icono_valor {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.valor_caja p {
+    font-family: var(--fuente-textos);
+    color: var(--color-gris-texto);
+    font-size: 0.9rem;
+}
+
+/* Responsive básico: si la pantalla es pequeña, se pone uno debajo de otro */
+@media (max-width: 768px) {
+    .seccion_historia {
+        flex-direction: column;
+    }
+    .seccion_valores {
+        grid-template-columns: 1fr;
+    }
+}
+

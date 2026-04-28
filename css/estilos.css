@@ -628,7 +628,7 @@
 /* Valores con Grid */
 .seccion_valores {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
     text-align: center;
     background-color: #f9f9f9; /* Un fondo gris muy suave para resaltar */
@@ -664,3 +664,158 @@
     }
 }
 
+/* --- DISEÑO DE LA PÁGINA DE CONTACTO --- */
+
+/* 1. Cabecera con degradado y Wave (Requisito 7 y 22) */
+.header_contacto {
+    background: linear-gradient(135deg, var(--color-rojo-oscuro), #000);
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+}
+
+/* La "Wave" o forma de ola hecha con un pseudo-elemento o SVG */
+.header_contacto::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: white;
+    /* Creamos una curva simple tipo wave con clip-path */
+    clip-path: ellipse(70% 100% at 50% 100%);
+}
+
+/* Contenedor del título */
+.titulo_seccion {
+    width: 100%; /* ¡Esto es la clave! Fuerza a la caja a ocupar todo el ancho */
+    flex-grow: 1;
+    display: flex;
+    justify-content: center; /* Lo centra horizontalmente */
+    align-items: center; /* Lo centra verticalmente */
+    padding-bottom: 40px; /* Lo subimos un poco para que no choque con el formulario */
+}
+
+/* Contenedor del título con posicionamiento absoluto (infalible) */
+.titulo_seccion {
+    position: absolute;
+    top: 60%; /* Lo bajamos un poco para que no se pegue al menú */
+    left: 0;
+    width: 100%; /* Ocupa toda la pantalla de lado a lado */
+    text-align: center; /* Centra el texto dentro de ese ancho total */
+    transform: translateY(-50%); /* Ajuste fino para el centro vertical */
+    z-index: 2; /* Para que se vea por encima del fondo */
+    pointer-events: none; /* Para que no estorbe al hacer clic */
+}
+
+/* El texto del título limpio */
+.titulo_seccion h1 {
+    margin: 0;
+    font-family: var(--fuente-titulos);
+    color: white;
+    font-size: 5rem;
+    text-shadow: 3px 3px 10px rgba(0,0,0,0.5);
+}
+
+/* 3. Columna de Información (Uso de Flexbox interno) */
+.info_contacto {
+    background: #1a1a1a;
+    color: white;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.info_contacto h2 {
+    font-family: var(--fuente-titulos);
+    color: var(--color-rojo-oscuro);
+    margin-bottom: 20px;
+}
+
+/* 4. Estilos del Formulario (Requisito 13 y 37) */
+.formulario_pro {
+    padding: 50px;
+    background: white;
+    animation: aparecerFormulario 1s ease-out; /* Animación Requisito 11 */
+}
+
+.campo {
+    margin-bottom: 20px;
+}
+
+.campo label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-family: var(--fuente-textos);
+}
+
+.campo input, .campo select, .campo textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #eee;
+    border-radius: 8px;
+    font-family: var(--fuente-textos);
+    transition: border-color 0.3s; /* Transición suave */
+}
+
+/* Efecto Focus (Cuando el usuario escribe) */
+.campo input:focus {
+    border-color: var(--color-rojo-oscuro);
+    outline: none;
+    box-shadow: 0 0 8px rgba(255,0,0,0.1);
+}
+
+/* 5. Botón con Animación y Hover (Requisito 23 y 26) */
+.boton_enviar {
+    background: var(--color-rojo-oscuro);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.boton_enviar:hover {
+    background: #000;
+    transform: scale(1.05); /* Efecto hover: se agranda un poco */
+    letter-spacing: 2px;
+}
+
+/* DEFINICIÓN DE LA ANIMACIÓN (Requisito 11 y 26) */
+@keyframes aparecerFormulario {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* 6. Responsive: De 2 columnas a 1 para móvil (Requisito 16 y 40) */
+@media (max-width: 768px) {
+    .contenedor_formulario {
+        grid-template-columns: 1fr;
+        margin: 20px;
+    }
+    
+    .titulo_seccion h1 {
+        font-size: 3rem;
+    }
+}
+
+.campo_radio{
+    margin: 1em;
+    padding: 1em;
+}

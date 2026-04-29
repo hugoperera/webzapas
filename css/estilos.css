@@ -36,7 +36,8 @@
 }
 
 .header_inicio{                     /*Poner un efecto que oscurece la foto de fondo y dar el efecto triangular al final de la foto*/
-    height: 1000px;
+    min-height: 90vh;
+    height: 140vh;
     background-image: 
         linear-gradient(
             180deg,
@@ -86,7 +87,8 @@
     flex-direction: column;   
     align-items: center;      
     text-align: center;       
-    margin-top: 250px;         
+    margin-top: 30vh;
+    padding: 0 20px;      
 }
 
 .texto_header h1 {                  /* Letra del font*/
@@ -132,22 +134,22 @@
 .contenedor_zapatillas {            /*Posicion de las fotos, tamaño y separación entre ellas*/
     display: flex;
     justify-content: center;
-    gap: 80px;
-    max-width: 1000px;
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
-    align-items: center;      
+    align-items: center;   
 }
 
 .caja_zapatilla {    /*ancho con respecto al tamaño de la pagina del contenedor de las zapatillas*/
-    width: 40%;
+    width: 90%;
+    max-width: 400px;
 }
 
 
 .zapa_flotante {        /*animacion de levitacion en la zapatilla*/
     width: 100%;
-    
     filter: drop-shadow(0px 20px 15px rgba(0, 0, 0, 0.4));
-    
     animation: levitacion 4s ease-in-out infinite; 
 }
 
@@ -158,17 +160,9 @@
     100% { transform: translateY(0px); }
 }
 
-
-.contenedor_zapatillas {
-    display: flex;
-    justify-content: center; /*Centra las zapatillas y el texto, los pone a la misma altura y deja espacio con el titulo*/
-    align-items: center;     
-    gap: 40px;
-}
-
-
 .caja_zapatilla img {
-    width: 320px;
+    width: 100%;
+    max-width: 320px;
     height: 220px;
     object-fit: contain; /* Evita que se deformen */
     
@@ -210,6 +204,8 @@
     margin-top: 80px; /* Le da espacio para respirar respecto a las zapatillas */
     font-family: 'Montserrat', sans-serif;
 }
+
+/*---------------foter----------------*/
 
 .footer-contenido {
     display: flex;
@@ -271,6 +267,7 @@
     margin-left: 10px;
     font-family: 'Courier New', Courier, monospace; /* Fuente tipo 'ticket' para el código */
 }
+
 
 
 
@@ -815,7 +812,30 @@
     }
 }
 
-.campo_radio{
-    margin: 1em;
-    padding: 1em;
+/* Estilos para el contenedor de contacto */
+.contenedor_contacto {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}
+
+.campo {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.campo label {
+    font-family: var(--fuente-textos);
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Ajuste para que los radio y checkbox no salgan en columna */
+.campo_radio, .campo_check {
+    margin: 10px 0;
+    font-family: var(--fuente-textos);
 }

@@ -1,3 +1,4 @@
+/*------------------Catalogo---------------------*/
 // NIKE P-6000
 if (document.getElementById("btn_blanco_p6000")) {
     let foto = document.getElementById("foto_zapa");
@@ -20,7 +21,7 @@ if (document.getElementById("btn_blanco_samba")) {
     });
 
     document.getElementById("btn_negro_samba").addEventListener("click", function() {
-        foto.src = "../img/zapas/adidassambanegras.png";
+        foto.src = "../img/zapas/adidassambanegras.png";s
     });
 
     document.getElementById("btn_marron_samba").addEventListener("click", function() {
@@ -92,4 +93,55 @@ if (document.getElementById("btn_blanco_airmax")) {
     });
 }
 
+/*----------------------Contacto----------------------*/
 
+
+// --- VALIDACIÓN DEL FORMULARIO DE CONTACTO ---
+
+// Buscamos el botón de enviar en la página
+let botonEnviar = document.querySelector(".boton_enviar");
+
+// El 'if' sirve para que este código solo se ejecute si estamos en la página de contacto 
+// (si no ponemos esto, dará error en la página de inicio porque el botón no existe allí)
+if (botonEnviar) {
+    
+    // Le decimos al botón que "escuche" cuando le hacemos clic
+    botonEnviar.addEventListener("click", function(evento) {
+        
+        // 1. Guardamos en variables lo que el usuario ha escrito.
+        // OJO: Asegúrate de que en tu HTML los input tienen id="nombre" e id="email"
+        let nombre = document.getElementById("nombre").value;
+        let email = document.getElementById("email").value;
+        let mensaje = document.getElementById("mensaje").value;
+        
+        // Para el checkbox, en vez de .value miramos .checked (si está marcado es true, si no es false)
+        let privacidad = document.getElementById("privacidad").checked;
+
+        // 2. Comprobamos si algún campo está vacío (las comillas "" significan vacío)
+        if (nombre === "" || email === "" || mensaje === "") {
+            
+            // Si falta algo, sacamos un mensaje de aviso
+            alert("Por favor, rellena todos los campos (Nombre, Email y Mensaje).");
+            
+            // Esta línea es MUY importante: cancela el envío del formulario para que la página no se recargue
+            evento.preventDefault(); 
+        }
+
+        // 3. Comprobamos si NO han marcado la casilla de privacidad
+        else if (privacidad === false) {
+            
+            alert("Debes aceptar la política de privacidad marcando la casilla.");
+            evento.preventDefault(); // Cancelamos el envío
+            
+        } 
+        // 4. Si los campos están llenos y la privacidad está marcada...
+        else {
+            
+            // Mensaje de éxito
+            alert("¡Mensaje enviado con éxito! Nos pondremos en contacto contigo pronto.");
+            
+            // Aquí NO ponemos evento.preventDefault(), así que el formulario terminará de enviarse 
+            // (y la página se recargará, que es lo que hace un formulario normal).
+        }
+    });
+}
